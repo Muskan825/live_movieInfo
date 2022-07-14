@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#22254b;
+    --secondary-color:#373b69;
+}
+body{
+    background-color: var(--primary-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+}
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary-color);
+}
+.search{
+    background-color: transparent;
+    border:2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    color:white;
+    font-family: inherit;
+}
+#tags{
+    width: 80%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+.tag{
+    background-color: rgb(193, 107, 75);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.search:focus{
+    outline: 0;
+    background-color: var(--primary-color);
+}
+.search::placeholder{
+    color: #7378c5;
+}
+.tag.change{
+    background-color: rgb(116, 172, 32);
+}
+.noR{
+    color:white;
+}
+.del{
+    display: none;
+}
+.movie{
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+.movie img{
+    width: 100%;
+}
+.movieinfo{
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+.movieinfo h3{
+    margin-top: 0;
+}
+.movieinfo span{
+    background-color: var(--primary-color);
+    padding: .25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.movieinfo span.green{
+    color:lightgreen;
+}
+.movieinfo span.orange{
+    color:orange;
+}
+.movieinfo span.red{
+    color:red;
+}
+.overview{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 1rem;
+    max-height: 100%;
+    transition:transform 0.3s ease-in;
+    transform: translateY(101%);
+}
+.movie:hover .overview{
+        transform: translateY(0);
+}
+
